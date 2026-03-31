@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Hello Jinja2</title>
+  </head>
+
+<body>
+
+  <!-- jsの読み込み -->
+    <script src="static/js/script09.js"></script>
+
+	<h1>{{ title }}</h1>
+	<p>{{ message }}</p>
+
+	<!-- POSTのときの処理 -->
+	{%- if flag %}
+	<div><img src="{{ image_url }}" alt="{{ image_name }}"></div>
+	{%- endif %}
+
+	<form action="/" method="POST" enctype="multipart/form-data">
+		<div>
+			<input type="file" name="image" accept="image/*" required>
+		</div>
+		<div>
+			<input type="submit" value="送信">
+		</div>
+	</form>
+</body>
+
+
+</html>
